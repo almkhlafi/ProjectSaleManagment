@@ -13,4 +13,12 @@
     <SourceRoot Include="C:\Users\Administrator\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.2\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.2\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)froko.csprojsetup\2.4.0\build\froko.csprojSetup.props" Condition="Exists('$(NuGetPackageRoot)froko.csprojsetup\2.4.0\build\froko.csprojSetup.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgStyleCop_Analyzers Condition=" '$(PkgStyleCop_Analyzers)' == '' ">C:\Users\Administrator\.nuget\packages\stylecop.analyzers\1.1.118</PkgStyleCop_Analyzers>
+    <Pkgfroko_csprojSetup Condition=" '$(Pkgfroko_csprojSetup)' == '' ">C:\Users\Administrator\.nuget\packages\froko.csprojsetup\2.4.0</Pkgfroko_csprojSetup>
+  </PropertyGroup>
 </Project>

@@ -52,6 +52,8 @@
             this.Amount.Size = new System.Drawing.Size(75, 20);
             this.Amount.TabIndex = 2;
             this.Amount.Text = "Amount :";
+            this.Amount.MouseEnter += new System.EventHandler(this.ListProducts_MouseEnter);
+            this.Amount.MouseHover += new System.EventHandler(this.ListProducts_MouseHover);
             // 
             // Price
             // 
@@ -62,6 +64,8 @@
             this.Price.Size = new System.Drawing.Size(51, 20);
             this.Price.TabIndex = 3;
             this.Price.Text = "Price :";
+            this.Price.MouseEnter += new System.EventHandler(this.ListProducts_MouseEnter);
+            this.Price.MouseHover += new System.EventHandler(this.ListProducts_MouseHover);
             // 
             // Description
             // 
@@ -81,8 +85,12 @@
             this.Controls.Add(this.Price);
             this.Controls.Add(this.Amount);
             this.Controls.Add(this.productImage);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ListProducts";
-            this.Size = new System.Drawing.Size(417, 135);
+            this.Size = new System.Drawing.Size(413, 135);
+            this.MouseEnter += new System.EventHandler(this.ListProducts_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ListProducts_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.ListProducts_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.productImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
